@@ -28,11 +28,11 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 **Key concepts**  
 
 - Task complexity levels (Table 1.1)  
-- Complex task characteristics: planning, diverse expertise, extensive context, adaptive solutions (Figure 1.4).citeturn4search1
+- Complex task characteristics: planning, diverse expertise, extensive context, adaptive solutions (Figure 1.4).
 
 **Discussion prompts**  
 
-- Identify real tasks from your work that match each complexity level (model / agent / multi-agent).citeturn4search1  
+- Identify real tasks from your work that match each complexity level (model / agent / multi-agent).  
 - Where have you seen LLM-only solutions fail because of missing tools or planning?
 
 **Hands-on exercise (individual)**  
@@ -41,7 +41,7 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 
 **Group activity (session)**  
 
-- Whiteboard the **reason–act–communicate–adapt loop** for a task your team cares about.citeturn4search1
+- Whiteboard the **reason–act–communicate–adapt loop** for a task your team cares about.
 
 ---
 
@@ -49,22 +49,22 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 
 **Reading**  
 
-- Chapter 1: Sections 1.4–1.9 (What is an Agent? What is a MAS? Orchestration & first MAS example).citeturn4search1
+- Chapter 1: Sections 1.4–1.9 (What is an Agent? What is a MAS? Orchestration & first MAS example).
 
 **Goals**  
 
-- Internalize the **anatomy of an agent** (model, tools, memory).citeturn4search1  
-- Understand the definition of a **multi-agent system** and the two orchestration approaches: workflow vs autonomous.citeturn4search1  
-- Become familiar with the **haiku poet + critic** example and round-robin orchestration.citeturn4search1
+- Internalize the **anatomy of an agent** (model, tools, memory).  
+- Understand the definition of a **multi-agent system** and the two orchestration approaches: workflow vs autonomous.  
+- Become familiar with the **haiku poet + critic** example and round-robin orchestration.
 
 **Key concepts**  
 
-- Agent action–perception loop (Figure 1.6).citeturn4search1  
-- Agent components (Figure 1.5) and MAS orchestration overview (Figure 1.7).citeturn4search1
+- Agent action–perception loop (Figure 1.6).  
+- Agent components (Figure 1.5) and MAS orchestration overview (Figure 1.7).
 
 **Hands-on exercise (individual or pair)**  
 
-- Follow the “Building Your First Multi-Agent System” section in Chapter 1 to implement the **poet + critic** round-robin MAS using `picoagents`.citeturn4search1
+- Follow the “Building Your First Multi-Agent System” section in Chapter 1 to implement the **poet + critic** round-robin MAS using `picoagents`.
 
 **Group activity (session)**  
 
@@ -79,18 +79,18 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 
 **Reading**  
 
-- Chapter 2: Sections 2.1–2.2 (Taxonomy; Sequential, Conditional, Parallel workflows).citeturn4search1
+- Chapter 2: Sections 2.1–2.2 (Taxonomy; Sequential, Conditional, Parallel workflows).
 
 **Goals**  
 
-- Understand the **autonomy spectrum** from explicit workflows to autonomous patterns (Figure 2.1).citeturn4search1  
-- Learn the three main **workflow patterns**: sequential, conditional, parallel.citeturn4search1  
+- Understand the **autonomy spectrum** from explicit workflows to autonomous patterns (Figure 2.1).  
+- Learn the three main **workflow patterns**: sequential, conditional, parallel.  
 - Map one of your own real-world processes to a workflow graph.
 
 **Key concepts**  
 
-- Nodes and edges; graphs as computational workflows (Sections 2.2, 6.1–6.3).citeturn4search1  
-- Sequential workflow example (Figure 2.2).citeturn4search1
+- Nodes and edges; graphs as computational workflows (Sections 2.2, 6.1–6.3).  
+- Sequential workflow example (Figure 2.2).
 
 **Hands-on exercise**  
 
@@ -109,25 +109,25 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 
 **Reading**  
 
-- Chapter 2: Sections 2.3–2.6 (Autonomous patterns; pattern selection; task management).citeturn4search1
+- Chapter 2: Sections 2.3–2.6 (Autonomous patterns; pattern selection; task management).
 
 **Goals**  
 
-- Understand **plan-based**, **handoff**, and **conversation-driven (group chat)** patterns.citeturn4search1  
-- Learn the trade-offs between deterministic workflows and emergent autonomous coordination.citeturn4search1  
-- Understand when to pick each pattern (Table 2.2, Section 2.4).citeturn4search1
+- Understand **plan-based**, **handoff**, and **conversation-driven (group chat)** patterns.  
+- Learn the trade-offs between deterministic workflows and emergent autonomous coordination.  
+- Understand when to pick each pattern (Table 2.2, Section 2.4).
 
 **Key concepts**  
 
 - Plan-based orchestration (Figure 2.6).  
 - Handoff pattern (Figure 2.7).  
-- Conversation-driven patterns: round-robin vs AI-driven turn taking (Figures 2.8–2.10).citeturn4search1
+- Conversation-driven patterns: round-robin vs AI-driven turn taking (Figures 2.8–2.10).
 
 **Hands-on exercise**  
 
 - Implement both:  
   - a **round-robin** conversation pattern; and  
-  - an **AI-driven** conversation pattern using `AIOrchestrator` (Chapter 7 mapping).citeturn4search1
+  - an **AI-driven** conversation pattern using `AIOrchestrator` (Chapter 7 mapping).
 
 **Group activity**  
 
@@ -135,7 +135,7 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
   - “model only”,  
   - “single agent”,  
   - “workflow MAS”,  
-  - “autonomous MAS”.citeturn4search1
+  - “autonomous MAS”.
 
 ---
 
@@ -143,13 +143,13 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 
 **Reading**  
 
-- Chapter 3 in full (UX principles, capability discovery, cost-aware delegation, observability, interruptibility).citeturn4search1
+- Chapter 3 in full (UX principles, capability discovery, cost-aware delegation, observability, interruptibility).
 
 **Goals**  
 
-- Understand the shift from **interface design** to **delegation design**.citeturn4search1  
-- Learn the four core UX principles: capability discovery, cost-aware delegation, observability & provenance, interruptibility (Figure 3.3).citeturn4search1  
-- Recognize the “jagged frontier” of reliability and its UX implications (Figure 3.2).citeturn4search1
+- Understand the shift from **interface design** to **delegation design**.  
+- Learn the four core UX principles: capability discovery, cost-aware delegation, observability & provenance, interruptibility (Figure 3.3).  
+- Recognize the “jagged frontier” of reliability and its UX implications (Figure 3.2).
 
 **Hands-on exercise**  
 
@@ -167,11 +167,11 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 
 **Reading**  
 
-- Chapter 4: Sections 4.1–4.7 (design principles, execution loop, model client, tools, memory).citeturn4search1
+- Chapter 4: Sections 4.1–4.7 (design principles, execution loop, model client, tools, memory).
 
 **Goals**  
 
-- Understand the **agent execution loop** and why an **async-first** design matters.citeturn4search1  
+- Understand the **agent execution loop** and why an **async-first** design matters.  
 - Implement an agent with:  
   - an LLM model client,  
   - at least one tool,  
@@ -179,9 +179,9 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 
 **Key concepts**  
 
-- Agent interface: `Agent(model, tools, memory)`.citeturn4search1  
-- Structured output and tool calling (Sections 4.5–4.6).citeturn4search1  
-- Short-term vs long-term memory, RAG introduction (Section 4.7).citeturn4search1
+- Agent interface: `Agent(model, tools, memory)`.  
+- Structured output and tool calling (Sections 4.5–4.6).  
+- Short-term vs long-term memory, RAG introduction (Section 4.7).
 
 **Hands-on exercise**  
 
@@ -203,13 +203,13 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 
 **Reading**  
 
-- Chapter 4: Sections 4.8–4.13 (agent-managed memory, middleware, OpenTelemetry, human-in-the-loop).citeturn4search1
+- Chapter 4: Sections 4.8–4.13 (agent-managed memory, middleware, OpenTelemetry, human-in-the-loop).
 
 **Goals**  
 
-- Understand **application-managed vs agent-managed memory** and when to use each.citeturn4search1  
-- Learn how middleware enables **control and observability** (Section 4.9–4.10).citeturn4search1  
-- Implement **tool approval** and basic human-in-the-loop (Section 4.13).citeturn4search1
+- Understand **application-managed vs agent-managed memory** and when to use each.  
+- Learn how middleware enables **control and observability** (Section 4.9–4.10).  
+- Implement **tool approval** and basic human-in-the-loop (Section 4.13).
 
 **Hands-on exercise**  
 
@@ -228,13 +228,13 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 
 **Reading**  
 
-- Chapter 5 in full (anatomy of computer-use agents, interface representations, action spaces, challenges).citeturn4search1
+- Chapter 5 in full (anatomy of computer-use agents, interface representations, action spaces, challenges).
 
 **Goals**  
 
-- Understand when **code/APIs are not enough** and UI automation is required.citeturn4search1  
-- Learn the three interface representation strategies: text-based, image-based, hybrid (Section 5.3).citeturn4search1  
-- Understand the action space and observation loop for GUI agents (Section 5.5).citeturn4search1
+- Understand when **code/APIs are not enough** and UI automation is required.  
+- Learn the three interface representation strategies: text-based, image-based, hybrid (Section 5.3).  
+- Understand the action space and observation loop for GUI agents (Section 5.5).
 
 **Hands-on exercise**  
 
@@ -252,20 +252,20 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 
 **Reading**  
 
-- Chapter 6 in full (workflows as computational graphs, edges, runner, checkpointing).citeturn4search1  
-- Chapter 7: Sections 7.1–7.3 (orchestrator loop, termination, round-robin).citeturn4search1
+- Chapter 6 in full (workflows as computational graphs, edges, runner, checkpointing).  
+- Chapter 7: Sections 7.1–7.3 (orchestrator loop, termination, round-robin).
 
 **Goals**  
 
-- Implement **workflow-based orchestration** using steps and edges.citeturn4search1  
-- Understand **checkpointing** and why it matters for long-running workflows (Section 6.7).citeturn4search1  
+- Implement **workflow-based orchestration** using steps and edges.  
+- Understand **checkpointing** and why it matters for long-running workflows (Section 6.7).  
 - Implement a **round-robin orchestrator** over multiple agents.
 
 **Hands-on exercise**  
 
 - Build a workflow MAS with 3–4 steps, for example:  
   - Search → Analyze → Draft → Review.  
-- Add at least one **conditional edge** (e.g., if quality < threshold, go back to Analyze).citeturn4search1
+- Add at least one **conditional edge** (e.g., if quality < threshold, go back to Analyze).
 
 **Group activity**  
 
@@ -280,14 +280,14 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 
 **Reading**  
 
-- Chapter 10 in full (evaluating multi-agent systems).citeturn4search1  
-- Chapter 11: Sections 11.2–11.3 (what to optimize, failure modes).citeturn4search1
+- Chapter 10 in full (evaluating multi-agent systems).  
+- Chapter 11: Sections 11.2–11.3 (what to optimize, failure modes).
 
 **Goals**  
 
-- Understand **trajectory-based evaluation** and multi-agent trajectories.citeturn4search1  
-- Learn how to design an **evaluation suite** and when to use LLM-as-judge (Sections 10.4–10.6).citeturn4search1  
-- Study common **failure modes** of MAS and treat them as optimization opportunities (Section 11.3).citeturn4search1
+- Understand **trajectory-based evaluation** and multi-agent trajectories.  
+- Learn how to design an **evaluation suite** and when to use LLM-as-judge (Sections 10.4–10.6).  
+- Study common **failure modes** of MAS and treat them as optimization opportunities (Section 11.3).
 
 **Hands-on exercise**  
 
@@ -298,7 +298,7 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 
 **Group activity**  
 
-- Compare evaluation results; categorize failures using the failure modes in Section 11.3 (e.g., “wrong pattern”, “no good tools”, “no evals”).citeturn4search1
+- Compare evaluation results; categorize failures using the failure modes in Section 11.3 (e.g., “wrong pattern”, “no good tools”, “no evals”).
 
 ---
 
@@ -306,17 +306,17 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 
 **Reading**  
 
-- Chapter 12 in full (Model Context Protocol (MCP), Agent-to-Agent protocol (A2A), security).citeturn4search1
+- Chapter 12 in full (Model Context Protocol (MCP), Agent-to-Agent protocol (A2A), security).
 
 **Goals**  
 
-- Understand **distributed agent requirements** (Section 12.1).citeturn4search1  
-- Learn MCP’s architecture and core concepts (Sections 12.2.1–12.2.3).citeturn4search1  
-- Understand A2A and when distributed protocols are necessary vs over-engineering (Section 12.5).citeturn4search1
+- Understand **distributed agent requirements** (Section 12.1).  
+- Learn MCP’s architecture and core concepts (Sections 12.2.1–12.2.3).  
+- Understand A2A and when distributed protocols are necessary vs over-engineering (Section 12.5).
 
 **Hands-on exercise**  
 
-- Run a simple example using an MCP server/tool (e.g., a filesystem tool) and connect an agent to it.citeturn4search1
+- Run a simple example using an MCP server/tool (e.g., a filesystem tool) and connect an agent to it.
 
 **Group activity**  
 
@@ -328,14 +328,14 @@ This plan is designed for a study group meeting **once per week (60–90 minutes
 
 **Reading**  
 
-- Chapter 13 in full (ethics, societal challenges, security, defense through middleware).citeturn4search1  
-- Chapter 14 or 15 (pick one case study most relevant to your domain: unstructured-data Q&A or software engineering agent).citeturn4search1  
-- Epilogue (for forward-looking view).citeturn4search1
+- Chapter 13 in full (ethics, societal challenges, security, defense through middleware).  
+- Chapter 14 or 15 (pick one case study most relevant to your domain: unstructured-data Q&A or software engineering agent).  
+- Epilogue (for forward-looking view).
 
 **Goals**  
 
-- Understand **agentic ethics**, agentic noise, platform imbalance, and emergent risks (Section 13.3).citeturn4search1  
-- Learn security patterns for agents that can act (Section 13.4, “Rule of Two”, middleware defenses).citeturn4search1  
+- Understand **agentic ethics**, agentic noise, platform imbalance, and emergent risks (Section 13.3).  
+- Learn security patterns for agents that can act (Section 13.4, “Rule of Two”, middleware defenses).  
 - Synthesize concepts from all previous weeks into a **capstone MAS design**.
 
 **Capstone project (team-based)**  
