@@ -173,11 +173,3 @@ Part IV demonstrates how the concepts, patterns, and infrastructure from earlier
 ### Outcome
 
 Part IV operationalizes the book’s ideas in concrete domains. It shows how to go from “building blocks” to **end-to-end applications** that you can adapt to your own scenarios (analytics agents, productivity agents, dev agents, etc.).
-
----
-
-## How to Use This Summary
-
-- As a **study guide**: Use each part’s section as a map while reading the corresponding chapters.
-- For **onboarding**: Give this document to team members who need a structured overview before diving into the full text.
-- For **design discussions**: Use the part summaries as a checklist when designing new multi-agent systems: foundations → architecture & implementation → evaluation & responsibility → applied case studies.
