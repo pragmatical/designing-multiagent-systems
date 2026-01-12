@@ -7,54 +7,44 @@
 
 ## Purpose
 
-This study group exists to help participants **learn how to design multi-agent systems**—not just how to call an LLM API, but how to architect agentic workflows that are reliable, testable, and maintainable.
+Learn how to design multi-agent systems that are reliable, testable, and maintainable, with a focus on practical patterns and real trade-offs.
 
-A second core goal is **exposure and collaboration with individuals in other dev crews**. Multi-agent systems are inherently cross-functional: effective solutions require coordination across product, engineering, data, and operations. This group is designed to create a lightweight space where people from different teams can learn together, compare approaches, and share real constraints from their day-to-day work.
+For the detailed weekly agenda and reading notes, start with the links above.
 
 ## What We’ll Learn
 
-We focus on practical patterns and engineering fundamentals for multi-agent systems, including:
+Core themes:
 
 - **System design for agents**: roles, responsibilities, handoffs, and orchestration patterns
-- **Planning and decomposition**: when and how agents should break problems down
-- **Tool use**: integrating agents with APIs, codebases, data stores, and automation
-- **Coordination and routing**: multi-agent collaboration, delegation, and task distribution
-- **Memory and context**: retrieval, summarization, state management, and context strategy
-- **Quality and safety**: evaluation, testing, guardrails, failure modes, and observability
-- **Production considerations**: cost, latency, privacy/security, and operational robustness
-
-The aim is to build shared intuition for when multi-agent systems are a good fit—and how to design them responsibly.
+- **Tool use + memory**: integrating tools, state, and context strategies
+- **Quality + safety**: evaluation, observability, guardrails, and failure modes
+- **Production trade-offs**: cost, latency, privacy/security, operational constraints
 
 ## Who It’s For (All Disciplines)
 
-This group is intentionally designed to include participants from **all disciplines**. It should be valuable across roles, including:
+Anyone building or shipping agentic systems, across disciplines:
 
-- **Engineering roles**: architecture, tool integration, reliability, testing, and deployment
-- **Data science roles**: evaluation methods, retrieval, data pipelines, measurement, and iteration
-- **Technical program management roles**: coordinating cross-team implementation, risks, milestones, and decision-making
-
-If your work touches product delivery, systems design, automation, analytics, or platform reliability, you’ll have relevant context to contribute.
+- Engineering, data science, product/UX, technical program management, security/compliance
 
 ## How We Work
 
-We aim to keep the format consistent and collaborative:
+Each session aims to produce a small artifact (diagram, checklist, workflow spec), with mixed-experience participation.
 
-- **Short readings / examples**: small, focused materials that illustrate a pattern
-- **Hands-on discussion**: compare designs, trade-offs, and real-world constraints
-- **Lightweight exercises**: sketch a workflow, define agent roles, or critique an architecture
-- **Cross-crew sharing**: rotate perspectives so teams can learn from each other’s practices
+Typical session format:
+
+- Quick recap (so people can join even if behind)
+- Small-group exercise (produce an artifact)
+- Share-outs + open questions
 
 ## Outcomes
 
-By participating, you should come away with:
+By the end, participants should have:
 
-- A shared vocabulary for agent and multi-agent design
-- Practical patterns you can apply to real projects
-- Better judgment around trade-offs, failure modes, and measurement
-- Stronger collaboration across dev crews and disciplines
+- Shared vocabulary for agents, tools, memory, orchestration, and evaluation
+- A set of reusable artifacts (rubrics/checklists/workflow specs)
+- Better judgment on trade-offs (cost, safety, UX, reliability)
 
-## Participation Expectations
+## Participation
 
-- Bring curiosity and a willingness to share what’s worked (and what hasn’t).
-- Ask clarifying questions—multi-agent design benefits from diverse perspectives.
-- Keep examples safe and appropriate for sharing (no sensitive data).
+- Be respectful and curious; optimize for shared learning.
+- Share examples that are safe to discuss (no sensitive data).
