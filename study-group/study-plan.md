@@ -1,377 +1,463 @@
 # 12-Week Multi-Agent Systems Study Plan
+<!-- markdownlint-disable MD024 -->
 
 Using **Victor Dibia’s _Designing Multi-Agent Systems_** as the primary material.
 
-This plan is designed for a study group meeting **once per week (60–90 minutes)**. Each week includes:
+This study plan is designed so that:
 
-- **Reading** from the book
-- **Learning goals**
-- **Discussion prompts**
-- **Hands-on exercises**
-- **In-session group activities**
+- Sessions are inclusive and valuable even if some participants **fall behind on the reading**.
+- Group activities **minimize dependency on prior expertise**.
+- Everyone can contribute meaningfully (design, critique, risk, UX, evaluation), not just the strongest coders.
+
+---
+
+## How each session runs (60–90 minutes)
+
+Use the same structure every week to minimize “context debt” and make facilitation easier.
+
+- **5 min — Arrival + agenda**: state today’s outcome (a shared artifact) and how decisions will be made.
+- **10 min — “Everyone can participate” primer**: one person gives a short recap using the standing prompt.
+- **25–35 min — Small-group exercise** (3–5 people): produce a concrete artifact.
+- **10–20 min — Share-outs**: each group shares 1 insight + 1 open question.
+- **5 min — Close**: quick retro + assign light prep (optional).
+
+### Standing recap prompt (works even without reading)
+
+Whoever recaps answers:
+
+- What is the **problem** this chapter/week addresses?
+- What is the **core idea** in one sentence?
+- What is a **real example** (work or personal)?
+- What is the **failure mode** if we misuse it?
+
+### Participant types (use these in every exercise)
+
+Instead of assigning roles, assume your group includes a mix of participant types. When you do an exercise, explicitly collect input from **at least 3 different types** so the artifact is useful to everyone.
+
+- **Newcomer / catching up**: needs clear definitions, examples, and a “why this matters” summary.
+- **Hands-on builder**: turns ideas into steps, interfaces, and minimal implementations.
+- **Domain expert**: grounds scenarios in real constraints, business rules, and edge cases.
+- **Product / UX**: focuses on user goals, delegation design, observability, and control.
+- **Risk / security / compliance minded**: surfaces misuse, safety controls, data boundaries, and approvals.
+- **Evaluator / QA**: defines measurable success criteria, test cases, and failure categorization.
+
+### Tiered participation (choose your depth)
+
+Every week has three lanes so people can participate without feeling behind.
+
+- **Baseline (everyone)**: discussion + artifact; no code required.
+- **Applied (optional)**: adapt the artifact to a real scenario or a sample in the repo.
+- **Stretch (optional)**: implement or extend something in code.
 
 ---
 
 ## Week 1 — Foundations I: Why Multi-Agent Systems?
 
-**Reading**  
+**Reading**: Preface (skim), Chapter 1: Sections 1.1–1.4
 
-- Preface (skim)  
-- Chapter 1: Sections 1.1–1.4 (Introduction; Why Multiple Agents; What is an Agent?)
+### Goals
 
-**Goals**  
+- Distinguish when a **model**, **single agent**, or **multi-agent system (MAS)** is the right tool.
+- Recognize task characteristics that push you toward agentic systems (planning, tools, context, adaptation).
+- Build a shared vocabulary for discussing “agentic” work in plain language.
 
-- Understand the progression: **model → agent → multi-agent system**.  
-- Grasp the core agent capabilities: **reason, act, communicate, adapt**.  
-- Recognize when tasks outgrow “single model” solutions.
+### Key Concepts
 
-**Key concepts**  
+- Task complexity spectrum: model → agent → MAS.
+- Agent capabilities: reasoning, acting (tools), communicating, adapting.
+- Common failure mode: prompt-only solutions break when they need tools, fresh data, or robust planning.
 
-- Task complexity levels (Table 1.1)  
-- Complex task characteristics: planning, diverse expertise, extensive context, adaptive solutions (Figure 1.4).
+### Session Outcome
 
-**Discussion prompts**  
+A shared list of tasks mapped to **model → agent → MAS**.
 
-- Identify real tasks from your work that match each complexity level (model / agent / multi-agent).  
-- Where have you seen LLM-only solutions fail because of missing tools or planning?
+### Baseline Group Exercise (Low-Dependency)
 
-**Hands-on exercise (individual)**  
+- Pick 2–3 tasks anyone can understand (e.g., travel planning, weekly status summary, incident triage).
+- For each task, fill a 6-box template:
+  - Inputs / Outputs
+  - Where fresh data is needed
+  - Where planning is needed
+  - Where multiple skills are needed
+  - Likely failure modes
+  - Best fit: model / agent / MAS (and why)
 
-- Implement a simple **prompt-only “agent”** (no tools) that answers Q&A and observe its limitations on tasks needing fresh data (e.g., “today’s stock price”).
+### Stretch (Optional)
 
-**Group activity (session)**  
-
-- Whiteboard the **reason–act–communicate–adapt loop** for a task your team cares about.
+Build a prompt-only “agent” and document where it fails.
 
 ---
 
 ## Week 2 — Foundations II: Agent and MAS Architecture
 
-**Reading**  
+**Reading**: Chapter 1: Sections 1.4–1.9
 
-- Chapter 1: Sections 1.4–1.9 (What is an Agent? What is a MAS? Orchestration & first MAS example).
+### Goals
 
-**Goals**  
+- Identify the core components of an agent: **model, tools, memory, control loop**.
+- Understand what makes a system “multi-agent” and how orchestration affects reliability and cost.
+- Practice reading an interaction as an **execution trace** (what happened, why, and when it stops).
 
-- Internalize the **anatomy of an agent** (model, tools, memory).  
-- Understand the definition of a **multi-agent system** and the two orchestration approaches: workflow vs autonomous.  
-- Become familiar with the **haiku poet + critic** example and round-robin orchestration.
+### Key Concepts
 
-**Key concepts**  
+- Agent action–perception loop and termination.
+- Orchestration basics: round-robin vs decision-based turn taking.
+- Traces/logs as a shared debugging surface for technical and non-technical participants.
 
-- Agent action–perception loop (Figure 1.6).  
-- Agent components (Figure 1.5) and MAS orchestration overview (Figure 1.7).
+### Session Outcome
 
-**Hands-on exercise (individual or pair)**  
+A shared “agent anatomy” diagram and a minimal orchestration sketch.
 
-- Follow the “Building Your First Multi-Agent System” section in Chapter 1 to implement the **poet + critic** round-robin MAS using `picoagents`.
+### Baseline Group Exercise (Low-Dependency)
 
-**Group activity (session)**  
+- Make one diagram together:
+  - Model, tools, memory, control loop, termination.
+- Then do a **role-play trace** (no code):
+  - Person A = “poet”, Person B = “critic”, Person C = “orchestrator”.
+  - Run 3 turns and write down: messages, decisions, stop condition.
 
-- Inspect an execution trace from your poet–critic system. Identify:  
-  - where reasoning happens,  
-  - where tools would fit if you added them,  
-  - how termination is decided.
+### Applied (Optional)
+
+Inspect an existing trace from someone’s implementation.
 
 ---
 
 ## Week 3 — Multi-Agent Patterns I: Workflow Patterns
 
-**Reading**  
+**Reading**: Chapter 2: Sections 2.1–2.2
 
-- Chapter 2: Sections 2.1–2.2 (Taxonomy; Sequential, Conditional, Parallel workflows).
+### Goals
 
-**Goals**  
+- Translate a real task into a simple, testable workflow.
+- Understand the difference between **sequential**, **conditional**, and **parallel** steps.
+- Make “done” and “quality checks” explicit in the workflow.
 
-- Understand the **autonomy spectrum** from explicit workflows to autonomous patterns (Figure 2.1).  
-- Learn the three main **workflow patterns**: sequential, conditional, parallel.  
-- Map one of your own real-world processes to a workflow graph.
+### Key Concepts
 
-**Key concepts**  
+- Workflows as graphs: nodes (steps) and edges (transitions).
+- Determinism and debuggability as benefits of workflows.
+- Validation steps as a practical reliability tool.
 
-- Nodes and edges; graphs as computational workflows (Sections 2.2, 6.1–6.3).  
-- Sequential workflow example (Figure 2.2).
+### Session Outcome
 
-**Hands-on exercise**  
+One workflow graph the group agrees is clear and testable.
 
-- For a task like “summarize recent incident reports and produce a weekly report”, design a **sequential workflow**: Ingest → Classify → Summarize → Format.
+### Baseline Group Exercise (Low-Dependency)
 
-**Group activity**  
+- Start with a plain-language task statement.
+- Convert it into a workflow with:
+  - 4–6 steps (verbs only)
+  - inputs/outputs per step
+  - at least 1 validation/check step
+- Everyone can contribute by suggesting steps, checks, or edge cases.
 
-- As a group, draw your workflow on a board and label each step as:  
-  - human-only,  
-  - agent-only, or  
-  - mixed human+agent.
+### Stretch (Optional)
+
+Implement the workflow in the repo framework of choice.
 
 ---
 
 ## Week 4 — Multi-Agent Patterns II: Autonomous Patterns
 
-**Reading**  
+**Reading**: Chapter 2: Sections 2.3–2.6
 
-- Chapter 2: Sections 2.3–2.6 (Autonomous patterns; pattern selection; task management).
+### Goals
 
-**Goals**  
+- Compare autonomous coordination patterns and choose one for a scenario.
+- Understand trade-offs between explicit workflows and emergent coordination.
+- Make safety, cost, and clarity constraints first-class in pattern selection.
 
-- Understand **plan-based**, **handoff**, and **conversation-driven (group chat)** patterns.  
-- Learn the trade-offs between deterministic workflows and emergent autonomous coordination.  
-- Understand when to pick each pattern (Table 2.2, Section 2.4).
+### Key Concepts
 
-**Key concepts**  
+- Autonomy spectrum (workflow → semi-autonomous → autonomous).
+- Patterns: plan-based, handoff, conversation/group-chat.
+- Pattern selection is a design decision: wrong pattern is a common failure mode.
 
-- Plan-based orchestration (Figure 2.6).  
-- Handoff pattern (Figure 2.7).  
-- Conversation-driven patterns: round-robin vs AI-driven turn taking (Figures 2.8–2.10).
+### Session Outcome
 
-**Hands-on exercise**  
+A pattern-selection decision record for 2 scenarios.
 
-- Implement both:  
-  - a **round-robin** conversation pattern; and  
-  - an **AI-driven** conversation pattern using `AIOrchestrator` (Chapter 7 mapping).
+### Baseline Group Exercise (Low-Dependency)
 
-**Group activity**  
-
-- Using the decision framework in Section 1.7 (Figure 1.8), classify 3–5 of your own scenarios into:  
-  - “model only”,  
-  - “single agent”,  
-  - “workflow MAS”,  
-  - “autonomous MAS”.
+- Use a “pattern picker” matrix:
+  - Determinism needed? (low/med/high)
+  - Task clarity? (low/med/high)
+  - Safety constraints? (low/med/high)
+  - Cost sensitivity? (low/med/high)
+- For two scenarios, choose: workflow vs plan-based vs handoff vs group-chat.
+- Ensure you capture:
+  - 2 risks (from a risk/security/compliance perspective), and
+  - a plain-language summary (from a newcomer perspective).
 
 ---
 
 ## Week 5 — UX Principles for Multi-Agent Systems
 
-**Reading**  
+**Reading**: Chapter 3
 
-- Chapter 3 in full (UX principles, capability discovery, cost-aware delegation, observability, interruptibility).
+### Goals
 
-**Goals**  
+- Treat agent UX as **delegation design**, not just interface design.
+- Identify what users need to trust and control an agentic system.
+- Produce actionable UX improvements that reduce confusion and risk.
 
-- Understand the shift from **interface design** to **delegation design**.  
-- Learn the four core UX principles: capability discovery, cost-aware delegation, observability & provenance, interruptibility (Figure 3.3).  
-- Recognize the “jagged frontier” of reliability and its UX implications (Figure 3.2).
+### Key Concepts
 
-**Hands-on exercise**  
+- Capability discovery: what the system can/can’t do.
+- Cost-aware delegation: time/money trade-offs.
+- Observability & provenance: “show your work.”
+- Interruptibility: stop, pause, undo, and recover.
 
-- Choose a MAS prototype (e.g., poet–critic or a simple research workflow) and:  
-  - add **basic activity logging and streaming**;  
-  - expose at least one **user control** (e.g., “Stop”/“Cancel”).
+### Session Outcome
 
-**Group activity**  
+A usability review checklist for agentic UX.
 
-- Critique a well-known agentic UX (Copilot, ChatGPT plugins, etc.) from the perspective of the four UX principles.
+### Baseline Group Exercise (Low-Dependency)
+
+- Pick any familiar product/flow (even non-AI).
+- Score it against the four principles:
+  - capability discovery
+  - cost-aware delegation
+  - observability & provenance
+  - interruptibility
+- Produce one “quick win” improvement for each principle.
+
+### Stretch (Optional)
+
+Add minimal logging + cancel/stop control to a sample agent.
 
 ---
 
 ## Week 6 — Building Agents from Scratch I: Agent Anatomy
 
-**Reading**  
+**Reading**: Chapter 4: Sections 4.1–4.7
 
-- Chapter 4: Sections 4.1–4.7 (design principles, execution loop, model client, tools, memory).
+### Goals
 
-**Goals**  
+- Understand the execution loop: how an agent decides, acts, and updates state.
+- Design tools with clear inputs/outputs and failure modes.
+- Recognize when structured outputs make systems more reliable.
 
-- Understand the **agent execution loop** and why an **async-first** design matters.  
-- Implement an agent with:  
-  - an LLM model client,  
-  - at least one tool,  
-  - short-term memory via message history.
+### Key Concepts
 
-**Key concepts**  
+- Tool calling as a reliability and capability upgrade over prompting.
+- Structured output (schemas) to reduce ambiguity.
+- Memory basics: short-term (conversation) vs long-term (knowledge/context).
 
-- Agent interface: `Agent(model, tools, memory)`.  
-- Structured output and tool calling (Sections 4.5–4.6).  
-- Short-term vs long-term memory, RAG introduction (Section 4.7).
+### Session Outcome
 
-**Hands-on exercise**  
+A shared implementation-agnostic agent execution loop.
 
-- Build an agent that:  
-  - answers questions,  
-  - calls a simple Python function tool,  
-  - uses message history to resolve pronouns or follow-up questions.
+### Baseline Group Exercise (Low-Dependency)
 
-**Group activity**  
+- Build a **tool card deck** (index-card style, in a doc):
+  - tool name, input, output, failure modes, safety notes
+- Each participant contributes 1 tool card (real or hypothetical).
+- As a group, decide where the tool fits in the execution loop.
 
-- Compare implementations and discuss:  
-  - how you structured prompts,  
-  - where structured output improved reliability,  
-  - what you logged for debugging.
+### Stretch (Optional)
+
+Implement 1 tool + structured output.
 
 ---
 
 ## Week 7 — Building Agents from Scratch II: Middleware, Memory & HITL
 
-**Reading**  
+**Reading**: Chapter 4: Sections 4.8–4.13
 
-- Chapter 4: Sections 4.8–4.13 (agent-managed memory, middleware, OpenTelemetry, human-in-the-loop).
+### Goals
 
-**Goals**  
+- Decide what must be logged/observed to debug and govern agents.
+- Define when to require human approval (human-in-the-loop).
+- Make memory policies explicit: what gets stored, when, and why.
 
-- Understand **application-managed vs agent-managed memory** and when to use each.  
-- Learn how middleware enables **control and observability** (Section 4.9–4.10).  
-- Implement **tool approval** and basic human-in-the-loop (Section 4.13).
+### Key Concepts
 
-**Hands-on exercise**  
+- Middleware as a control layer (logging, policy, safety checks).
+- Tool approval for risky actions.
+- Memory write strategies: automatic vs explicit; safe defaults.
 
-- Extend last week’s agent to:  
-  - use a simple long-term memory store (e.g., file- or list-based),  
-  - add a middleware that logs each model call and tool call,  
-  - require explicit approval for at least one “risky” tool.
+### Session Outcome
 
-**Group activity**  
+A safety/observability “minimum viable controls” checklist.
 
-- Review your middleware and memory strategies. Discuss the trade-offs between automatic vs explicit memory writes and between light vs heavy logging.
+### Baseline Group Exercise (Low-Dependency)
+
+- For a chosen agent, decide:
+  - what to log (model calls, tool calls, outcomes)
+  - what requires approval (high-risk actions)
+  - what should be stored (memory) and when
+- Write one policy: “When X happens, require Y approval and log Z.”
 
 ---
 
 ## Week 8 — Computer-Use Agents and Interface Grounding
 
-**Reading**  
+**Reading**: Chapter 5
 
-- Chapter 5 in full (anatomy of computer-use agents, interface representations, action spaces, challenges).
+### Goals
 
-**Goals**  
+- Determine when UI automation is justified vs APIs/tools.
+- Understand the observation/action loop for computer-use agents.
+- Identify fragility and safety concerns early.
 
-- Understand when **code/APIs are not enough** and UI automation is required.  
-- Learn the three interface representation strategies: text-based, image-based, hybrid (Section 5.3).  
-- Understand the action space and observation loop for GUI agents (Section 5.5).
+### Key Concepts
 
-**Hands-on exercise**  
+- Interface representations: text-based, image-based, hybrid.
+- Action spaces: clicks, typing, navigation, forms.
+- Grounding and robustness: what the agent “sees” must match reality.
 
-- Implement a _minimal_ browser-automation agent that:  
-  - opens a page,  
-  - performs one or two deterministic interactions (e.g., search, click a result).
+### Session Outcome
 
-**Group activity**  
+A “UI agent feasibility” rubric.
 
-- Identify concrete tasks in your environment (internal tools, portals) where computer-use agents would unlock value that API-based tools cannot.
+### Baseline Group Exercise (Low-Dependency)
+
+- Choose 2 tasks:
+  - one that should use APIs
+  - one that might require UI automation
+- For each, fill a rubric:
+  - observability (what can the agent see?)
+  - action space (what can it do?)
+  - fragility (what breaks?)
+  - safety (what’s risky?)
+  - fallback plan (what if UI changes?)
 
 ---
 
 ## Week 9 — Multi-Agent Workflows & Orchestration from Scratch
 
-**Reading**  
+**Reading**: Chapter 6; Chapter 7: Sections 7.1–7.3
 
-- Chapter 6 in full (workflows as computational graphs, edges, runner, checkpointing).  
-- Chapter 7: Sections 7.1–7.3 (orchestrator loop, termination, round-robin).
+### Goals
 
-**Goals**  
+- Turn a workflow graph into an executable spec with checkpoints and recovery.
+- Define termination and recovery in a way the whole group can review.
+- Compare orchestration options by how they behave under failure.
 
-- Implement **workflow-based orchestration** using steps and edges.  
-- Understand **checkpointing** and why it matters for long-running workflows (Section 6.7).  
-- Implement a **round-robin orchestrator** over multiple agents.
+### Key Concepts
 
-**Hands-on exercise**  
+- Workflow runners and checkpoints for long tasks.
+- Termination conditions: what “done” means.
+- Recovery strategies: retry, fallback, human escalation.
 
-- Build a workflow MAS with 3–4 steps, for example:  
-  - Search → Analyze → Draft → Review.  
-- Add at least one **conditional edge** (e.g., if quality < threshold, go back to Analyze).
+### Session Outcome
 
-**Group activity**  
+A testable workflow spec plus one termination rule.
 
-- Run each team’s workflow on the same task and compare:  
-  - trace length (number of steps),  
-  - failure modes,  
-  - where checkpointing helped.
+### Baseline Group Exercise (Low-Dependency)
+
+- Using last week’s workflow graph, add:
+  - a checkpoint policy (when to save state)
+  - a termination rule (what “done” means)
+  - a recovery rule (what to do on failure)
 
 ---
 
 ## Week 10 — Evaluation and Optimization of MAS
 
-**Reading**  
+**Reading**: Chapter 10; Chapter 11: Sections 11.2–11.3
 
-- Chapter 10 in full (evaluating multi-agent systems).  
-- Chapter 11: Sections 11.2–11.3 (what to optimize, failure modes).
+### Goals
 
-**Goals**  
+- Define success criteria that are measurable and aligned to user value.
+- Build a small evaluation suite that enables iteration.
+- Use failure modes to decide what to fix first.
 
-- Understand **trajectory-based evaluation** and multi-agent trajectories.  
-- Learn how to design an **evaluation suite** and when to use LLM-as-judge (Sections 10.4–10.6).  
-- Study common **failure modes** of MAS and treat them as optimization opportunities (Section 11.3).
+### Key Concepts
 
-**Hands-on exercise**  
+- Task suites and scoring rubrics.
+- Trajectories/traces as evaluation artifacts (not just final outputs).
+- Judges: rule-based checks vs LLM-as-judge; trade-offs and safeguards.
 
-- For your Week 9 workflow:  
-  - create a small **task suite** (e.g., 5 tasks),  
-  - define simple **success criteria**,  
-  - implement a **judge** (LLM-as-judge or rule-based) to score outputs.
+### Session Outcome
 
-**Group activity**  
+A 5-task evaluation suite and scoring rubric.
 
-- Compare evaluation results; categorize failures using the failure modes in Section 11.3 (e.g., “wrong pattern”, “no good tools”, “no evals”).
+### Baseline Group Exercise (Low-Dependency)
+
+- Brainstorm 10 candidate tasks; pick 5 that are:
+  - representative
+  - easy to understand
+  - measurable
+- Define success criteria that don’t require ML expertise:
+  - correctness checks, completeness checks, format checks, and a 1–5 usefulness score.
+
+### Stretch (Optional)
+
+Implement LLM-as-judge and compare with rule-based scoring.
 
 ---
 
 ## Week 11 — Distributed Agents and Protocols
 
-**Reading**  
+**Reading**: Chapter 12
 
-- Chapter 12 in full (Model Context Protocol (MCP), Agent-to-Agent protocol (A2A), security).
+### Goals
 
-**Goals**  
+- Decide when distribution is necessary vs over-engineering.
+- Identify trust boundaries and what data/actions must be constrained.
+- Understand how protocols like MCP/A2A help with interoperability and separation.
 
-- Understand **distributed agent requirements** (Section 12.1).  
-- Learn MCP’s architecture and core concepts (Sections 12.2.1–12.2.3).  
-- Understand A2A and when distributed protocols are necessary vs over-engineering (Section 12.5).
+### Key Concepts
 
-**Hands-on exercise**  
+- Distributed requirements: ownership boundaries, security, network constraints.
+- Tool servers and standardized interfaces (MCP) and agent-to-agent coordination (A2A).
+- Security posture: least privilege, approvals, and auditing across boundaries.
 
-- Run a simple example using an MCP server/tool (e.g., a filesystem tool) and connect an agent to it.
+### Session Outcome
 
-**Group activity**  
+A boundary diagram showing when distribution is warranted.
 
-- For your organization, brainstorm scenarios where **distributed agents** (across services or org boundaries) are truly required vs when a single-process MAS is sufficient.
+### Baseline Group Exercise (Low-Dependency)
+
+- Draw a system boundary diagram:
+  - what runs in one process
+  - what must be separate (security, ownership, network)
+  - what data cannot cross boundaries
+- Decide whether MCP/A2A is justified for one scenario.
 
 ---
 
 ## Week 12 — Ethics, Responsible AI, and Capstone Synthesis
 
-**Reading**  
+**Reading**: Chapter 13 + (Chapter 14 or 15)
 
-- Chapter 13 in full (ethics, societal challenges, security, defense through middleware).  
-- Chapter 14 or 15 (pick one case study most relevant to your domain: unstructured-data Q&A or software engineering agent).  
-- Epilogue (for forward-looking view).
+### Goals
 
-**Goals**  
+- Identify ethical and safety risks unique to agents that can act.
+- Apply practical defenses (policy, middleware, approvals, monitoring).
+- Synthesize the course into a capstone design that non-experts can review.
 
-- Understand **agentic ethics**, agentic noise, platform imbalance, and emergent risks (Section 13.3).  
-- Learn security patterns for agents that can act (Section 13.4, “Rule of Two”, middleware defenses).  
-- Synthesize concepts from all previous weeks into a **capstone MAS design**.
+### Key Concepts
 
-**Capstone project (team-based)**  
-Design and (at least partially) implement a **multi-agent system** that includes:
+- Agentic risk: emergent behavior, misuse, automation bias, “agentic noise”.
+- Defense in depth: policy + logging + approvals + least privilege.
+- Capstone as a coherent design: agents, tools, orchestration, UX controls, evaluation.
 
-- 3+ agents with clearly differentiated roles.  
-- At least one **tool per agent**.  
-- One **orchestration pattern** (workflow _or_ autonomous); hybrid is a plus.  
-- Short-term memory and at least a minimal long-term memory component.  
-- Basic UX surface with:  
-  - streaming logs,  
-  - at least one interrupt mechanism,  
-  - minimal evaluation harness (success criteria + manual or LLM-as-judge scoring).
+### Session Outcome
 
-**Group activity (Week 12 session)**  
+A capstone design that’s reviewable by non-experts.
 
-- Each team presents:  
-  - the **problem** they chose,  
-  - the **architecture** (agents, tools, orchestration pattern),  
-  - key **trade-offs** they made (e.g., why workflow vs autonomous),  
-  - evaluation results and main failure modes,  
-  - how they applied **UX and responsible AI principles**.
+### Baseline Group Exercise (Low-Dependency)
+
+- Create a “capstone poster” (one page):
+  - problem statement (plain language)
+  - agents + roles
+  - tools + approvals
+  - orchestration choice + why
+  - evaluation plan
+  - top 3 risks + mitigations
+- Presentations are scored on clarity, not code.
+
+### Stretch (Optional)
+
+Partial implementation + demo trace.
 
 ---
 
-## Ongoing Practices Throughout the 12 Weeks
+## Ongoing practices (inclusive by default)
 
-You can reinforce learning by repeating these each week:
-
-- **Concept mapping** – After each chapter, individually sketch a diagram of the main concepts (e.g., Week 4: autonomy spectrum and patterns; Week 6: agent execution loop).
-- **Pattern identification** – For every new example you see (in the book or your work), ask:  
-  - which **orchestration pattern** is this?  
-  - what are the **task characteristics** (planning, diverse expertise, context, adaptation)?
-- **Retrospective** – End each weekly session with a 5–10 minute retro:  
-  - what concept is clear?  
-  - what is still confusing?  
-  - what should we demo or implement next week to clarify it?
-
-This markdown file is ready to be used as a shared syllabus for your study group or as the basis for a repo `README.md`.
+- **Jargon jar**: whenever someone uses jargon, define it once in a shared glossary.
+- **One-minute teach-back**: end each session with one volunteer summarizing today’s concept in plain language.
+- **Artifact-first**: every session produces something shareable (diagram, rubric, checklist, workflow spec) so absentees can catch up without reading everything.
